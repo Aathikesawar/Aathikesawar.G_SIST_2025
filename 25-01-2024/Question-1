@@ -1,0 +1,45 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+
+
+public class Solve_problems
+{   
+    static int[] solve(int px, int py, int qx, int qy)
+    {
+        int rx=2*qx-px;
+        int ry=2*qy-py;
+        return new int[]{rx,ry};
+    }
+
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        // Read input
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            int px=sc.nextInt();
+            int py=sc.nextInt();
+            
+            int qx=sc.nextInt();
+            int qy=sc.nextInt();
+            
+            int[] result=solve(px, py, qx, qy);
+            System.out.println(result[0] +" "+ result[1]);
+        }
+        
+        
+        //
+        sc.close();
+    }
+}
